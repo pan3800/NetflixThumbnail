@@ -21,6 +21,7 @@
 		195E11012C366B71000F350F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		195E11042C366B71000F350F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		195E110B2C366F96000F350F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		19F83FE62C37892900C98FE4 /* JSON.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = JSON.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 		195E10F12C366B6F000F350F = {
 			isa = PBXGroup;
 			children = (
+				19F83FE62C37892900C98FE4 /* JSON.playground */,
 				195E10FC2C366B6F000F350F /* NetflixThumbnail */,
 				195E10FB2C366B6F000F350F /* Products */,
 			);
