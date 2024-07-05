@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var bigBanner: String = ""
+    @State var dramas: [Drama] = []
+    
+    
     var body: some View {
         ScrollView {
             HStack {
@@ -22,7 +26,7 @@ struct HomeView: View {
                     .padding()
             }
             
-            AsyncImage(url: URL(string: "https://ios-poster-json.s3.ap-northeast-2.amazonaws.com/posters/0BigImagePoster/bigPoster.png")) { image in
+            AsyncImage(url: URL(string: bigBanner)) { image in
                 image
                     .resizable()
                     .cornerRadius(10)
@@ -55,6 +59,52 @@ struct HomeView: View {
                     .buttonStyle(.bordered)
                 }
                 .padding()
+            }
+            
+            if dramas.count == 0 {
+                ProgressView()
+                    .tint(Color.white)
+                    .padding()
+                    .task {
+                        let url = URL(string: "https://gvec03gvkf.execute-api.ap-northeast-2.amazonaws.com/")!
+                        
+                        let (data, _) = try! await URLSession.shared.data(from: url)
+                        let decoder = JSONDecoder()
+                        
+                        let dramaCollection = try!
+                        decoder.decode(DramaCollection.self, from: data)
+                        
+                        bigBanner = dramaCollection.bigBanner
+                        dramas = dramaCollection.dramas
+                    }
+            } else {
+                // dramas = [drama1, drama2, drama3]
+                //                drama1 = {
+                //                    categoryTitle = "지금 뜨는 콘텐츠"
+                //                    posters = [이미지주소1, 이미지주소2, ....]
+                //                }
+                ForEach(dramas, id: \.categoryTitle) { drama in
+                    VStack(alignment: .leading) {
+                        Text(drama.categoryTitle)
+                            .font(.title)
+                        ScrollView(.horizontal) {
+                            HStack(spacing: 20) {
+                                ForEach(drama.posters, id: \.self) { posterUrlString in
+                                        let url = URL(string: posterUrlString)
+                                    AsyncImage(url: url) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: 100, height: 175)
+                                    .cornerRadius(10)
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                    }
+                }
+                
             }
         }
         .background(.black)

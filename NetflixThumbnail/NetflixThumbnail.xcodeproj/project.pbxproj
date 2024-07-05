@@ -12,6 +12,7 @@
 		195E11022C366B71000F350F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195E11012C366B71000F350F /* Assets.xcassets */; };
 		195E11052C366B71000F350F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195E11042C366B71000F350F /* Preview Assets.xcassets */; };
 		195E110C2C366F96000F350F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E110B2C366F96000F350F /* HomeView.swift */; };
+		197636BC2C37C46D005B42D2 /* Drama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197636BB2C37C46D005B42D2 /* Drama.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		195E11012C366B71000F350F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		195E11042C366B71000F350F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		195E110B2C366F96000F350F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		197636BB2C37C46D005B42D2 /* Drama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drama.swift; sourceTree = "<group>"; };
 		19F83FE62C37892900C98FE4 /* JSON.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = JSON.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		19F83FE72C37902500C98FE4 /* JSON_Decodable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = JSON_Decodable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				195E110B2C366F96000F350F /* HomeView.swift */,
 				195E11012C366B71000F350F /* Assets.xcassets */,
 				195E11032C366B71000F350F /* Preview Content */,
+				197636BB2C37C46D005B42D2 /* Drama.swift */,
 			);
 			path = NetflixThumbnail;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				195E110C2C366F96000F350F /* HomeView.swift in Sources */,
 				195E11002C366B6F000F350F /* ContentView.swift in Sources */,
 				195E10FE2C366B6F000F350F /* NetflixThumbnailApp.swift in Sources */,
+				197636BC2C37C46D005B42D2 /* Drama.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

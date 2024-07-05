@@ -38,10 +38,15 @@ Task {
     }
     
     
-//    struct DramaCollection: Decodable {
-//        var BIG_BANNER: String
-//        var DRAMAS: [Drama]
-//    }
+    //    struct DramaCollection: Decodable {
+    //        var BIG_BANNER: String
+    //        var DRAMAS: [Drama]
+    //    }
+    
+    //    struct Drama: Decodable {
+    //        var CATEGORY_TITLE: String
+    //        var POSTERS: [String]
+    //    }
     
     // Encodable JSON를 서버로 보낼때,
     // Encodable와 Decodable 둘다 사용하고 싶은때 Codable 사용하기
@@ -54,13 +59,7 @@ Task {
             case dramas = "DRAMAS"
         }
     }
-    
-
-//    struct Drama: Decodable {
-//        var CATEGORY_TITLE: String
-//        var POSTERS: [String]
-//    }
-    
+        
     struct Drama: Codable {
         var categoryTitle: String
         var posters: [String]
